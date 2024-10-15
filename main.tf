@@ -14,34 +14,3 @@ module "ec2_instance" {
   key_name      = var.key_name
 }
 
-output "vpc_id" {
-  value = module.vpc.vpc_id # Assuming you added an output for VPC ID in the VPC module
-}
-
-output "subnet_id" {
-  value = module.vpc.subnet_id
-}
-
-output "security_group_id" {
-  value = module.vpc.security_group_id
-}
-
-output "route_table_id" {
-  value = module.vpc.route_table_id
-}
-
-output "internet_gateway_id" {
-  value = module.vpc.internet_gateway_id
-}
-
-output "instance_id" {
-  value = module.ec2_instance.instance_id # Output for the EC2 instance ID
-}
-
-output "instance_public_ip" {
-  value = module.ec2_instance.instance_public_ip # Output for the EC2 instance public IP
-}
-
-output "eip_public_ip" {
-  value = module.ec2_instance.eip_public_ip # Output for the Elastic IP
-}
